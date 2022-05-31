@@ -1,0 +1,26 @@
+.OneKeyData {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        width: 30%;
+        border-radius: 6px;
+    }
+
+    .container-number-name {
+        width: 45%;
+        margin-left: 10%;
+
+        .number {
+            font-weight: 700;
+            color: #282D30;
+            font-size: 20px;
+        }
+
+        .name {
+            font-weight: 500;
+            color: #74798C;
+            font-size: 14px;
+        }
+    }
+}
