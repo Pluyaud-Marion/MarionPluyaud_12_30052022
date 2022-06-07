@@ -1,11 +1,11 @@
-//import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+
 import { useParams } from 'react-router-dom';
 import BarChartRender from '../components/BarChartRender';
 import KeyData from '../components/KeyData';
 import { urlApi } from '../utils/const/urlApi';
 import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
+
 
 const Profile = () => {
     const { id } = useParams()

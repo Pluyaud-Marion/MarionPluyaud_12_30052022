@@ -1,14 +1,19 @@
 import React from 'react';
 import OneKeyData from './OneKeyData';
 
+import iconCalories from "../assets/calories-icon.png"
+import iconProteines from "../assets/protein-icon.png"
+import iconLipides from "../assets/lipide-icon.png"
+import iconGlucides from "../assets/glucide-icon.png"
+
 const KeyData = ({ keyData }) => {
 
     return (
         <div className='container-keyData'>
-            <OneKeyData keyImg={"../calories-icon.png"} keyData={keyData?.calorieCount.toLocaleString('en')} keyUnit="kCal" keyName={" Calories"} />
-            <OneKeyData keyImg={"../protein-icon.png"} keyData={keyData?.proteinCount} keyUnit="g" keyName=" Proteines" />
-            <OneKeyData keyImg={"../glucide-icon.png"} keyData={keyData?.carbohydrateCount} keyUnit="g" keyName=" Glucides" />
-            <OneKeyData keyImg={"../lipide-icon.png"} keyData={keyData?.lipidCount} keyUnit="g" keyName=" Lipides" />
+            <OneKeyData keyImg={iconCalories} keyData={keyData?.calorieCount.toLocaleString('en')} keyUnit="kCal" keyName={" Calories"} />
+            <OneKeyData keyImg={iconProteines} keyData={keyData?.proteinCount} keyUnit="g" keyName=" Proteines" />
+            <OneKeyData keyImg={iconGlucides} keyData={keyData?.carbohydrateCount} keyUnit="g" keyName=" Glucides" />
+            <OneKeyData keyImg={iconLipides} keyData={keyData?.lipidCount} keyUnit="g" keyName=" Lipides" />
         </div>
     );
 };
