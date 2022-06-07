@@ -1,10 +1,12 @@
-import React from 'react';
-import Build from '../components/Build';
+
+import ButtonUser from '../components/ButtonUser';
+import { userList } from '../utils/const/userList';
+
 
 const Home = () => {
     return (
-        <div>
-            <Build />
+        <div className='Home'>
+            <ButtonUser userList={userList} />
         </div>
     );
 };

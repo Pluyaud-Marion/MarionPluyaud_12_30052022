@@ -8,10 +8,11 @@
     }
 
     .container-number-name {
-        width: 45%;
+        width: 40%;
         margin-left: 10%;
 
-        .number {
+        .number,
+        .unit {
             font-weight: 700;
             color: #282D30;
             font-size: 20px;

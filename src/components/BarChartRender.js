@@ -1,16 +1,6 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
-const BarChartRender = ({ id }) => {
-    const [dataBarChart, setDataBarChart] = useState([])
-
-    useEffect(() => {
-        axios.get("../user_activity.json")
-            .then(res => {
-                setDataBarChart(res.data.find(dataUser => dataUser.userId === Number(id)))
-            })
-    }, [id])
+const BarChartRender = ({ dataActivity }) => {
 
     const formatXAxis = (tickItem) => {
         return tickItem + 1;
@@ -29,7 +19,7 @@ const BarChartRender = ({ id }) => {
 
     return (
         <div>
-            <BarChart width={800} height={300} data={dataBarChart.sessions}>
+            <BarChart width={800} height={300} data={dataActivity?.data?.sessions}>
                 <Legend iconType="circle" />
                 <XAxis tickFormatter={formatXAxis} />
                 <YAxis orientation="right" />

@@ -1,22 +1,40 @@
-
+//import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import ButtonUser from '../components/ButtonUser';
+import { useParams } from 'react-router-dom';
+import BarChartRender from '../components/BarChartRender';
+import KeyData from '../components/KeyData';
+import { urlApi } from '../utils/const/urlApi';
+import { urlMock } from '../utils/const/urlMock';
+import { useApi } from '../utils/useApi/useApi';
 
-const Home = () => {
-    const [dataUser, setDataUser] = useState([])
+const Profile = () => {
+    const { id } = useParams()
+    //const [data, setData] = useState([])
 
-    useEffect(() => {
-        axios.get("user_main_data.json")
-            .then(res => setDataUser(res.data))
-            .catch(error => console.log(error))
-    }, [])
+    // useEffect(() => {
+    //     axios.get("../user_main_data.json")
+    //         .then(res => {
+    //             setData(res.data.find(dataUser => dataUser.id === Number(id)));
+    //         })
+    // }, [id])
+
+    const url = urlMock
+
+    const dataMain = useApi(url.userMainData(id))
+
+    const dataActivity = useApi(url.userActivity(id))
+
+    //console.log(dataActivity);
     return (
-        <div className='Home'>
-            <h1>Page profil globale</h1>
-            <ButtonUser dataUser={dataUser} />
+        <div className='Profile'>
+            <header>
+                <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.data?.userInfos?.firstName}</span></h1>
+                <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            </header>
+            <KeyData keyData={dataMain?.data?.keyData} />
+            <BarChartRender dataActivity={dataActivity} />
         </div>
     );
 };
 
-export default Home;
+export default Profile;

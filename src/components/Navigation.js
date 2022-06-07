@@ -8,7 +8,7 @@ const Navigation = () => {
                 <img className='logo' src='../logo.png' alt='logo sportsee' />
                 <div className='container-nav'>
                     <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/"}>Accueil</NavLink>
-                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/profile"}>Profil</NavLink>
+                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/user"}>Profil</NavLink>
                     <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/settings"}>Réglage</NavLink>
                     <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/community"}>Communauté</NavLink>
                 </div>
