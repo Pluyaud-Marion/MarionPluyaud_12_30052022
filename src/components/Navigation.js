@@ -9,8 +9,8 @@ const Navigation = () => {
                 <div className='container-nav'>
                     <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/"}>Accueil</NavLink>
                     <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/profile"}>Profil</NavLink>
-                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/inprogress"}>Réglage</NavLink>
-                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/inprogress"}>Communauté</NavLink>
+                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/settings"}>Réglage</NavLink>
+                    <NavLink className={(nav) => (nav.isActive ? "nav-active" : "nav")} to={"/community"}>Communauté</NavLink>
                 </div>
             </div>
             <div className='Navigation-verticale'>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'
+import Profile from './pages/Profile'
 import Error from './pages/Error'
-import Profile from './pages/Profile';
-import InProgress from './pages/InProgress'
+import User from './pages/User';
+import Community from './pages/Community';
+import Settings from './pages/Settings';
 import Navigation from './components/Navigation';
+import Home from './pages/Home';
 
 const App = () => {
   return (
@@ -12,8 +14,10 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/profile/:id' element={<Profile />} />
-        <Route path='/inprogress' element={<InProgress />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/user/:id' element={<User />} />
+        <Route path='/community' element={<Community />} />
+        <Route path='/settings' element={<Settings />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

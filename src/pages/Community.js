@@ -1,12 +1,10 @@
 import React from 'react';
 import Build from '../components/Build';
 
-const Home = () => {
+const Community = () => {
     return (
-        <div>
-            <Build />
-        </div>
+        <Build />
     );
 };
 
-export default Home;
+export default Community;

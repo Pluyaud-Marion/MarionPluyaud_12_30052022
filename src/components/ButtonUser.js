@@ -7,7 +7,7 @@ const User = ({ dataUser }) => {
         <div>
             {
                 dataUser.map((user) => (
-                    <Link to={"/profile/" + user.id} key={user.id}>
+                    <Link to={"/user/" + user.id} key={user.id}>
                         <button className='button' key={user.id}>Utilisateur {user.id}</button>
                     </Link>
                 ))

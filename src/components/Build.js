@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InProgress = () => {
+const Build = () => {
     return (
         <div>
             <h1>Page en construction ... un peu de patience</h1>
@@ -8,4 +8,4 @@ const InProgress = () => {
     );
 };
 
-export default InProgress;
+export default Build;

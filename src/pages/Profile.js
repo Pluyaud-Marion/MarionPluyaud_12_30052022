@@ -1,28 +1,22 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import KeyData from '../components/KeyData';
 
-const Profile = () => {
-    const { id } = useParams()
-    const [data, setData] = useState([])
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ButtonUser from '../components/ButtonUser';
+
+const Home = () => {
+    const [dataUser, setDataUser] = useState([])
 
     useEffect(() => {
-        axios.get("../user_main_data.json")
-            .then(res => {
-                setData(res.data.find(dataUser => dataUser.id === Number(id)));
-            })
-    }, [id])
-
+        axios.get("user_main_data.json")
+            .then(res => setDataUser(res.data))
+            .catch(error => console.log(error))
+    }, [])
     return (
-        <div className='Profile'>
-            <header>
-                <h1 className='title'>Bonjour <span className='firstname'>{data?.userInfos?.firstName}</span></h1>
-                <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-            </header>
-            <KeyData keyData={data?.keyData} />
+        <div className='Home'>
+            <h1>Page profil globale</h1>
+            <ButtonUser dataUser={dataUser} />
         </div>
     );
 };
 
-export default Profile;
+export default Home;
