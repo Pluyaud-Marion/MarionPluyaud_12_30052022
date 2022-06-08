@@ -1,0 +1,40 @@
+.BarChart {
+    background-color: #FBFBFB;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    height: 280px;
+    margin-right: 5%;
+
+    .recharts-responsive-container {
+        margin: 0 auto;
+    }
+
+    .title-barchart {
+        font-size: 15px;
+        color: #20253A;
+        position: relative;
+        top: 19px;
+        right: -26px
+    }
+
+}
+
+.container-payload {
+    background-color: #E60000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+
+    .kg,
+    .kcal {
+        color: #FFFFFF;
+        font-size: 10px;
+    }
+}

@@ -1,7 +1,10 @@
 .Profile {
-    position: relative;
-    top: 20px;
-    left: 170px;
+    // position: relative;
+    // top: 20px;
+    // left: 170px;
+    //display: flex;
+    //justify-content: space-between;
+    margin-left: 12%;
 
     header {
         .title {
@@ -17,5 +20,11 @@
             font-size: 18px;
             font-weight: 400;
         }
+    }
+
+    .container-barchart-keyData {
+        display: flex;
+        justify-content: space-between;
+        width: 98%;
     }
 }

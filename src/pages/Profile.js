@@ -31,8 +31,11 @@ const Profile = () => {
                 <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.data?.userInfos?.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </header>
-            <KeyData keyData={dataMain?.data?.keyData} />
-            <BarChartRender dataActivity={dataActivity} />
+            <div className='container-barchart-keyData'>
+                <BarChartRender dataActivity={dataActivity} />
+                <KeyData keyData={dataMain?.data?.keyData} />
+            </div>
+
         </div>
     );
 };

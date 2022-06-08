@@ -1,6 +1,14 @@
 .OneKeyData {
     display: flex;
     align-items: center;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
 
     .icon {
         width: 30%;
@@ -15,7 +23,7 @@
         .unit {
             font-weight: 700;
             color: #282D30;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .name {
