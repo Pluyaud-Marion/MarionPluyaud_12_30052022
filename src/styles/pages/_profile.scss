@@ -23,8 +23,16 @@
     }
 
     .container-barchart-keyData {
+        border: blue solid;
         display: flex;
         justify-content: space-between;
         width: 98%;
+        position: absolute;
+    }
+
+    .container-average-graph {
+        border: green solid;
+        position: relative;
+        top: 350px;
     }
 }

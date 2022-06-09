@@ -9,7 +9,7 @@ const BarChartRender = ({ dataActivity }) => {
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
-                <div className='container-payload'>
+                <div className='container-payload-barchart'>
                     <p className='kg'>{`${payload[0].value}kg`}</p>
                     <p className='kcal'>{`${payload[1].value}kCal`}</p>
                 </div>
@@ -28,7 +28,7 @@ const BarChartRender = ({ dataActivity }) => {
                     <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="15" tick={{ fill: "#9B9EAC" }} padding={{ left: -30, right: -30 }} />
                     <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tickSize="15" domain={['dataMin-5', 'dataMax+1']} tickCount={4} tick={{ fill: "#9B9EAC" }} />
                     <YAxis hide yAxisId="left" orientation="left" axisLine={false} tickLine={false} />
-                    <Tooltip width={50} content={<CustomTooltip />} cursor={{ fill: "#C4C4C4", fillOpacity: "0.50" }} position={{ y: 30 }} />
+                    <Tooltip width={50} content={<CustomTooltip />} cursor={{ fill: "#C4C4C4", fillOpacity: "0.50" }} position={{ y: 20 }} />
                     <Bar dataKey="kilogram" yAxisId="right" fill='#282D30' name='Poids (kg)' maxBarSize={12} radius={[20, 20, 0, 0]} />
                     <Bar dataKey="calories" yAxisId="left" fill='#E60000' name='Calories brûlées (kCal)' maxBarSize={12} radius={[20, 20, 0, 0]} margin={{ left: 0, right: 30 }} />
 
