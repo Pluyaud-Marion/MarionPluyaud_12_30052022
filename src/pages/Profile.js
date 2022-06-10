@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import BarChartRender from '../components/BarChartRender';
 import KeyData from '../components/KeyData';
 import LineChartRender from '../components/LineChartRender';
+import RadarChartRender from '../components/RadarChartRender';
+import RadialBarChartRender from '../components/RadialBarChartRender';
 import { urlApi } from '../utils/const/urlApi';
 import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
@@ -17,6 +19,7 @@ const Profile = () => {
 
     const dataActivity = useApi(url.userActivity(id))
     const dataAverageSessions = useApi(url.userAverageSessions(id))
+    const dataPerformances = useApi(url.userPerformances(id))
 
     return (
         <div className='Profile'>
@@ -31,6 +34,8 @@ const Profile = () => {
             </div>
             <div className='container-average-graph'>
                 <LineChartRender dataAverageSessions={dataAverageSessions} />
+                <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
+                <RadialBarChartRender todayScore={dataMain?.data?.todayScore} />
             </div>
 
 

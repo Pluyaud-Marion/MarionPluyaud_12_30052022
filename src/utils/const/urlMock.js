@@ -9,7 +9,7 @@ export const urlMock = {
         return `../data/${id}/user_average_sessions.json`
     },
     userPerformances(id) {
-        return `..data/${id}/user_performance.json`
+        return `../data/${id}/user_performance.json`
     }
 
 }
