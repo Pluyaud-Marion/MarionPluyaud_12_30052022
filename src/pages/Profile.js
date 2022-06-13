@@ -27,16 +27,25 @@ const Profile = () => {
                 <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.data?.userInfos?.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </header>
-            <div className='container-barchart-keyData'>
-                <BarChartRender dataActivity={dataActivity} />
+            <div className='container-graph'>
+                <div className='container-graph-recharts'>
+                    <BarChartRender dataActivity={dataActivity} />
+                    <div className='container-small-graph'>
+                        <LineChartRender dataAverageSessions={dataAverageSessions} />
+                        <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
+                        <RadialBarChartRender todayScore={dataMain?.data?.todayScore} />
+                    </div>
+                </div>
+                {/* <div className='container-keyData'> */}
                 <KeyData keyData={dataMain?.data?.keyData} />
+                {/* </div> */}
 
             </div>
-            <div className='container-small-graph'>
+            {/* <div className='container-small-graph'>
                 <LineChartRender dataAverageSessions={dataAverageSessions} />
                 <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
                 <RadialBarChartRender todayScore={dataMain?.data?.todayScore} />
-            </div>
+            </div> */}
 
 
         </div>

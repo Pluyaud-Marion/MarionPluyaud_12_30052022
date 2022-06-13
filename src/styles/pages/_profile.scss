@@ -24,21 +24,33 @@
         }
     }
 
-    .container-barchart-keyData {
+
+    .container-graph {
         border: blue solid;
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        //position: absolute;
+        height: 577px;
+
+        .container-graph-recharts {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: yellow solid;
+
+            .container-small-graph {
+                border: green solid;
+                display: flex;
+                width: 96%;
+
+            }
+        }
+
+
+
+
     }
 
-    .container-small-graph {
-        border: green solid;
-        position: relative;
-        top: 350px;
-        display: flex;
 
-    }
 
 
 
