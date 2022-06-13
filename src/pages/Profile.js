@@ -32,7 +32,7 @@ const Profile = () => {
                 <KeyData keyData={dataMain?.data?.keyData} />
 
             </div>
-            <div className='container-average-graph'>
+            <div className='container-small-graph'>
                 <LineChartRender dataAverageSessions={dataAverageSessions} />
                 <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
                 <RadialBarChartRender todayScore={dataMain?.data?.todayScore} />

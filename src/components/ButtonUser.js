@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const User = ({ userList }) => {
+const ButtonUser = ({ userList }) => {
 
     return (
-        <div>
+        <div className='ButtonUser'>
             {
                 userList.map((user) => (
                     <Link to={"/user/" + user.id} key={user.id}>
@@ -17,4 +17,4 @@ const User = ({ userList }) => {
     );
 };
 
-export default User;
+export default ButtonUser;
