@@ -1,11 +1,6 @@
 .Profile {
-    // position: relative;
-    // top: 20px;
-    left: 130px;
-    width: 85%;
-    //display: flex;
-    //justify-content: space-between;
-    //margin-left: 12%;
+    left: 119px;
+    width: 87%;
     position: absolute;
 
     header {
@@ -26,21 +21,20 @@
 
 
     .container-graph {
-        border: blue solid;
         display: flex;
-        height: 577px;
+        height: 560px;
+        justify-content: space-between;
 
         .container-graph-recharts {
-            width: 75%;
+            width: 76%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: yellow solid;
 
             .container-small-graph {
-                border: green solid;
                 display: flex;
-                width: 96%;
+                width: 100%;
+                justify-content: space-between;
 
             }
         }
