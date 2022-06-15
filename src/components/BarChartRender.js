@@ -1,4 +1,6 @@
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import circleRed from "../assets/icon-circle-red.png"
+import circleBlack from "../assets/icon-circle-black.png"
 
 const BarChartRender = ({ dataActivity }) => {
 
@@ -21,19 +23,30 @@ const BarChartRender = ({ dataActivity }) => {
     return (
         <div className='BarChart'>
             <span className='title-barchart'>Activité quotidienne</span>
+            <div className='legend-black'>
+                <img className='icon' src={circleBlack} alt="icon circle black" />
+                <span className='text-icon'>Poids (kg)</span>
+            </div>
+            <div className='legend-red'>
+                <img className='icon' src={circleRed} alt="icon circle red" />
+                <span className='text-icon'>Calories brûlées (kCal)</span>
+            </div>
+
+
             <ResponsiveContainer width="90%" height={250} >
-                <BarChart width={650} height={250} data={dataActivity?.data?.sessions} barCategoryGap={30} margin={{ top: 0, right: 0, left: 0, bottom: 5 }}>
+                <BarChart width={650} height={250} data={dataActivity?.data?.sessions} barCategoryGap={30} margin={{ top: 50, right: 0, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 5" vertical={false} />
-                    <Legend iconType="circle" iconSize={10} align='right' verticalAlign='top' height={50} wrapperStyle={{ fontSize: 12 }} />
-                    <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="15" tick={{ fill: "#9B9EAC" }} padding={{ left: -30, right: -30 }} />
-                    <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tickSize="15" domain={['dataMin-5', 'dataMax+1']} tickCount={4} tick={{ fill: "#9B9EAC" }} />
+                    {/* <Legend iconType="circle" iconSize={10} align='right' verticalAlign='top' height={50} wrapperStyle={{ fontSize: 12 }} /> */}
+                    <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="15" tick={{ fill: "#9B9EAC", fontSize: "14" }} padding={{ left: -30, right: -30 }} stroke="#DEDEDE" />
+                    <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tickSize="25" domain={['dataMin-5', 'dataMax+1']} tickCount={4} tick={{ fill: "#9B9EAC", fontSize: "14" }} />
                     <YAxis hide yAxisId="left" orientation="left" axisLine={false} tickLine={false} />
                     <Tooltip width={50} content={<CustomTooltip />} cursor={{ fill: "#C4C4C4", fillOpacity: "0.50" }} position={{ y: 20 }} />
-                    <Bar dataKey="kilogram" yAxisId="right" fill='#282D30' name='Poids (kg)' maxBarSize={12} radius={[20, 20, 0, 0]} />
-                    <Bar dataKey="calories" yAxisId="left" fill='#E60000' name='Calories brûlées (kCal)' maxBarSize={12} radius={[20, 20, 0, 0]} margin={{ left: 0, right: 30 }} />
+                    <Bar dataKey="kilogram" yAxisId="right" fill='#282D30' maxBarSize={12} radius={[20, 20, 0, 0]} />
+                    <Bar dataKey="calories" yAxisId="left" fill='#E60000' s maxBarSize={12} radius={[20, 20, 0, 0]} />
 
                 </BarChart>
             </ResponsiveContainer>
+
         </div>
     );
 };

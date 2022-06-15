@@ -1,6 +1,5 @@
 .BarChart {
-    // background-color: #FBFBFB;
-    background-color: greenyellow;
+    background-color: #FBFBFB;
     width: 96%;
     border-radius: 5px;
     padding-left: 2%;
@@ -9,6 +8,7 @@
     padding-right: 2%;
     height: 280px;
     margin-right: 5%;
+    position: relative;
 
     .recharts-responsive-container {
         margin: 0 auto;
@@ -23,6 +23,23 @@
         font-weight: 500;
     }
 
+    .legend-black {
+        position: absolute;
+        left: 350px;
+        width: 30%;
+    }
+
+    .text-icon {
+        color: #74798C;
+        font-size: 14px;
+        margin-left: 5%;
+    }
+
+    .legend-red {
+        position: absolute;
+        left: 450px;
+        width: 30%;
+    }
 }
 
 .container-payload-barchart {

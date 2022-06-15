@@ -8,7 +8,7 @@ const PieChartRender = ({ dataTodayScore }) => {
     const delta = 100 - (todayScore * 100)
 
     const score = [
-        { name: "full", value: todayScore * 100, fill: "#E60000" },
+        { name: "full", value: todayScore * 100, fill: "#FF0000" },
         { name: "empty", value: delta, fill: "white" }
     ]
     const middle = [{
@@ -17,7 +17,7 @@ const PieChartRender = ({ dataTodayScore }) => {
 
     return (
         <div className='PieChart'>
-            <span className='titleChart'>Score</span>
+            <span className='title-chart'>Score</span>
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart >
                     <Pie data={middle} dataKey="value" innerRadius={0} outerRadius={80} fill="white" />
@@ -25,8 +25,8 @@ const PieChartRender = ({ dataTodayScore }) => {
                 </PieChart>
             </ResponsiveContainer>
             <div className='legend'>
-                <span>{todayScore * 100 + "%"}  </span>
-                <p>de votre <br />
+                <span className='legend-number'>{todayScore * 100 + "%"}  </span>
+                <p className='legend-text'>de votre <br />
                     objectif</p>
             </div>
 
