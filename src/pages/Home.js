@@ -6,7 +6,7 @@ import { userList } from '../utils/const/userList';
 const Home = () => {
     return (
         <div className='Home'>
-            <div className='text'>Veuillez sélectionner votre numéro d'utilisateur : </div>
+            <div className='text'>🥇 Pour consulter vos performances 🥇, <br />Veuillez sélectionner votre numéro d'utilisateur : </div>
             <ButtonUser userList={userList} />
         </div>
     );

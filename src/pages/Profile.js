@@ -35,9 +35,6 @@ const Profile = () => {
                         <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
                         <PieChartRender dataTodayScore={dataMain?.data} />
                     </div>
-                    {/* <RadialBarChartRender todayScore={dataMain?.data?.todayScore * 100} /> */}
-
-
                 </div>
                 <KeyData keyData={dataMain?.data?.keyData} />
             </div>

@@ -6,6 +6,7 @@ import Community from './pages/Community';
 import Settings from './pages/Settings';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
+import ErrorProfile from './pages/ErrorProfile';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/profile/:id' element={<Profile />} /> */}
+        <Route path='/user' element={<ErrorProfile />} />
         <Route path='/user/:id' element={<Profile />} />
         <Route path='/community' element={<Community />} />
         <Route path='/settings' element={<Settings />} />
