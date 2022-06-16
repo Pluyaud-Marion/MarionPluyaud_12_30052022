@@ -5,8 +5,7 @@ import KeyData from '../components/KeyData';
 import LineChartRender from '../components/LineChartRender';
 import PieChartRender from '../components/PieChartRender';
 import RadarChartRender from '../components/RadarChartRender';
-// import { urlApi } from '../utils/const/urlApi';
-// import { urlMock } from '../utils/const/urlMock';
+import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
 import { useContext } from "react";
 import { ModeContext } from "../utils/context"
@@ -48,6 +47,7 @@ const Profile = () => {
                 </div>
                 <KeyData keyData={dataMain?.data?.keyData} />
             </div>
+            <span className='data-type'>{mode === urlMock ? "--- Données Mockées ---" : "--- Données de l'API ---"}</span>
         </div>
     );
 };

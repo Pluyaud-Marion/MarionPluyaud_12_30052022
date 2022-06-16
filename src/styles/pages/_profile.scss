@@ -1,6 +1,7 @@
 .Profile {
     left: 119px;
     width: 87%;
+    height: 780px;
     position: absolute;
 
     header {
@@ -23,6 +24,7 @@
     .container-graph {
         display: flex;
         height: 560px;
+        margin-bottom: 3%;
         justify-content: space-between;
 
         .container-graph-recharts {
@@ -38,12 +40,14 @@
 
             }
         }
-
-
-
-
     }
 
+    .data-type {
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        font-style: italic;
+    }
 
 
 
