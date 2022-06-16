@@ -7,19 +7,23 @@ import Settings from './pages/Settings';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ErrorProfile from './pages/ErrorProfile';
+import { ModeProvider } from './utils/context';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navigation />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/user' element={<ErrorProfile />} />
-        <Route path='/user/:id' element={<Profile />} />
-        <Route path='/community' element={<Community />} />
-        <Route path='/settings' element={<Settings />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <ModeProvider>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/user' element={<ErrorProfile />} />
+          <Route path='/user/:id' element={<Profile />} />
+          <Route path='/community' element={<Community />} />
+          <Route path='/settings' element={<Settings />} />
+          <Route path='/error' element={<Error />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </ModeProvider>
     </BrowserRouter>
   );
 };

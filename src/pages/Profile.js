@@ -1,25 +1,35 @@
 
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import BarChartRender from '../components/BarChartRender';
 import KeyData from '../components/KeyData';
 import LineChartRender from '../components/LineChartRender';
 import PieChartRender from '../components/PieChartRender';
 import RadarChartRender from '../components/RadarChartRender';
-import { urlApi } from '../utils/const/urlApi';
-import { urlMock } from '../utils/const/urlMock';
+// import { urlApi } from '../utils/const/urlApi';
+// import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
-
+import { useContext } from "react";
+import { ModeContext } from "../utils/context"
 
 const Profile = () => {
     const { id } = useParams()
 
-    const url = urlMock
+    const { mode } = useContext(ModeContext)
+
+    const url = mode
+
+    //const url = urlMock
     //const url = urlApi
     const dataMain = useApi(url.userMainData(id))
 
     const dataActivity = useApi(url.userActivity(id))
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
+
+    // if (id != dataMain?.data?.id) {
+    //     return <Navigate to="/error" />
+    // }
+
 
     return (
         <div className='Profile'>

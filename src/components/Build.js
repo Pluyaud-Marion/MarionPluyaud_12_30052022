@@ -2,7 +2,7 @@ import React from 'react';
 
 const Build = () => {
     return (
-        <div>
+        <div className='Build'>
             <h1>⚙️🛠 Page en construction ... un peu de patience ⚙️🛠</h1>
         </div>
     );
