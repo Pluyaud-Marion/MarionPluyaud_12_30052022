@@ -21,6 +21,7 @@ const RadarChartRender = ({ dataPerformances }) => {
         5: "Vitesse",
         6: "Intensité"
     }
+
     const translation = (el) => french[el]
 
     return (
@@ -29,7 +30,7 @@ const RadarChartRender = ({ dataPerformances }) => {
                 <RadarChart outerRadius="60%" data={dataPerformances}>
                     <PolarGrid radialLines={false} />
                     <PolarRadiusAxis tickCount={6} tick={false} axisLine={false} />
-                    <PolarAngleAxis dataKey="kind" tickSize={7} tickFormatter={translation} stroke="#FFF" style={{ fontSize: 10 }} tickLine={false} />
+                    <PolarAngleAxis dataKey="kind" tickSize={7} tickFormatter={translation} stroke="#FFF" fontSize={10} tickLine={false} />
                     <Radar dataKey="value" fill='#FF0101B2' fillOpacity={0.8} />
 
                 </RadarChart>

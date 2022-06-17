@@ -37,7 +37,7 @@ const PieChartRender = ({ dataTodayScore }) => {
                 </PieChart>
             </ResponsiveContainer>
             <div className='legend'>
-                <span className='legend-number'>{todayScore * 100 + "%"}  </span>
+                <span className='legend-number'>{todayScore * 100}% </span>
                 <p className='legend-text'>de votre <br />
                     objectif</p>
             </div>

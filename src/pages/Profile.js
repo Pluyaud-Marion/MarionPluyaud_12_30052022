@@ -25,10 +25,10 @@ const Profile = () => {
     //const url = urlMock
     //const url = urlApi
     const dataMain = useApi(url.userMainData(id))
-
     const dataActivity = useApi(url.userActivity(id))
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
+
 
     // if (id != dataMain?.data?.id) {
     //     return <Navigate to="/error" />

@@ -66,3 +66,4 @@ const BarChartRender = ({ dataActivity }) => {
 };
 
 export default BarChartRender;
+
