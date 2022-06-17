@@ -5,6 +5,7 @@ import iconYoga from "../assets/icon-yoga.png"
 import iconSwim from "../assets/icon-swim.png"
 import iconBike from "../assets/icon-bike.png"
 import iconFitness from "../assets/icon-fitness.png"
+
 const Navigation = () => {
     return (
         <div>

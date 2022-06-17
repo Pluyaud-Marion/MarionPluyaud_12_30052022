@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ErrorProfile from './pages/ErrorProfile';
 import { ModeProvider } from './utils/context';
 
+//Router
 const App = () => {
   return (
     <BrowserRouter>

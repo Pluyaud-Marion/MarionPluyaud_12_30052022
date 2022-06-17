@@ -1,7 +1,17 @@
+import PropTypes from "prop-types"
 import React from 'react';
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
+/**
+ * chart about average sessions duration of one user
+ * @param {Array} dataAverageSessions - props of component parent Profile / infos about average sessions duration
+ * @returns {JSX} - React component
+ */
 const LineChartRender = ({ dataAverageSessions }) => {
+
+    LineChartRender.propTypes = {
+        dataAverageSessions: PropTypes.array
+    }
 
     const day = {
         1: "L",
@@ -12,8 +22,14 @@ const LineChartRender = ({ dataAverageSessions }) => {
         6: "S",
         7: "D"
     }
+
     const weekFormat = (el) => day[el]
 
+    /**
+     * Function for customize tooltip
+     * @param {Boolean} active  
+     * @param {Array} payload  
+     */
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
@@ -28,7 +44,7 @@ const LineChartRender = ({ dataAverageSessions }) => {
         <div className='LineChart'>
             <span className='title-linechart'>Durée moyenne des sessions</span>
             <ResponsiveContainer width="100%" height={230} >
-                <LineChart width={200} data={dataAverageSessions?.data?.sessions} margin={{ top: 50, bottom: 20, left: 10, right: 10 }}  >
+                <LineChart width={200} data={dataAverageSessions} margin={{ top: 50, bottom: 20, left: 10, right: 10 }}  >
                     <XAxis dataKey="day" tickLine={false} axisLine={false} tickSize="15" tick={{ fill: "#FFF", opacity: 0.5, fontSize: 12 }} tickFormatter={weekFormat} />
                     <YAxis hide />
                     <Tooltip width={50} content={<CustomTooltip />} cursor={{ stroke: "#000000", strokeOpacity: "0.1", strokeWidth: 50, }} position={{ y: 100 }} />

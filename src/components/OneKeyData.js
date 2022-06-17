@@ -1,6 +1,22 @@
 import React from 'react';
+import PropTypes from "prop-types"
 
+/**
+ * 
+ * @param {String} keyImg - props contains all img 
+ * @param {(String | Number)} keyData - props contains all keyData (keyData of calories is a string, the rest is a number) 
+ * @param {String} keyName - props contains all the name
+ * @param {String} keyUnit - props contains all the unit
+ * @returns {JSX} - React component 
+ */
 const OneKeyData = ({ keyImg, keyData, keyName, keyUnit }) => {
+
+    OneKeyData.propTypes = {
+        keyImg: PropTypes.string,
+        keyData: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        keyName: PropTypes.string,
+        keyUnit: PropTypes.string
+    }
 
     return (
         <div className='OneKeyData'>

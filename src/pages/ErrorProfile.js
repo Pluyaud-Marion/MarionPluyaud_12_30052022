@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * Page profil when user click "profil" on navigation
+ * @returns {JSX} - React component - Page
+ */
 const ErrorProfile = () => {
     return (
         <div className='ErrorProfile'>

@@ -4,6 +4,8 @@ import { urlMock } from '../utils/const/urlMock';
 import { ModeContext } from "../utils/context"
 
 const SwitchButton = () => {
+
+    //import ModeContext and use toogleMode and mode with useContext
     const { toogleMode, mode } = useContext(ModeContext)
 
     return (

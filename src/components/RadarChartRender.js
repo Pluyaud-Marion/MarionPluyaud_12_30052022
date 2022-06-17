@@ -1,7 +1,17 @@
+import PropTypes from "prop-types"
 import React from 'react';
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from 'recharts';
 
+/**
+ * chart about performance details of one user
+ * @param {Array} dataPerformances -  - props of component parent Profile / infos about performance details
+ * @returns {JSX} - React component
+ */
 const RadarChartRender = ({ dataPerformances }) => {
+
+    RadarChartRender.propTypes = {
+        dataPerformances: PropTypes.array
+    }
 
     const french = {
         1: "Cardio",

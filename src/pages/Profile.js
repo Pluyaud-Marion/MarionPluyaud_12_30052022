@@ -10,6 +10,11 @@ import { useApi } from '../utils/useApi/useApi';
 import { useContext } from "react";
 import { ModeContext } from "../utils/context"
 
+
+/**
+ * Page profil with all charts and infos
+ * @returns {JSX} - React component - Page 
+ */
 const Profile = () => {
     const { id } = useParams()
 
@@ -38,9 +43,9 @@ const Profile = () => {
             </header>
             <div className='container-graph'>
                 <div className='container-graph-recharts'>
-                    <BarChartRender dataActivity={dataActivity} />
+                    <BarChartRender dataActivity={dataActivity?.data?.sessions} />
                     <div className='container-small-graph'>
-                        <LineChartRender dataAverageSessions={dataAverageSessions} />
+                        <LineChartRender dataAverageSessions={dataAverageSessions?.data?.sessions} />
                         <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
                         <PieChartRender dataTodayScore={dataMain?.data} />
                     </div>

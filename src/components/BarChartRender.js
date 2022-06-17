@@ -1,13 +1,28 @@
+import PropTypes from "prop-types"
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import circleRed from "../assets/icon-circle-red.png"
 import circleBlack from "../assets/icon-circle-black.png"
 
+/**
+ * chart about daily activity of one user
+ * @param {Array} dataActivity - props of component parent Profile / infos about daily activity 
+ * @returns {JSX} - React component
+ */
 const BarChartRender = ({ dataActivity }) => {
+
+    BarChartRender.propTypes = {
+        dataActivity: PropTypes.array
+    }
 
     const formatXAxis = (tickItem) => {
         return tickItem + 1;
     }
 
+    /**
+     * Function for customize tooltip
+     * @param {Boolean} active  
+     * @param {Array} payload  
+     */
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
@@ -18,7 +33,6 @@ const BarChartRender = ({ dataActivity }) => {
             )
         }
     }
-
 
     return (
         <div className='BarChart'>
@@ -34,7 +48,7 @@ const BarChartRender = ({ dataActivity }) => {
 
 
             <ResponsiveContainer width="90%" height={250} >
-                <BarChart width={650} height={250} data={dataActivity?.data?.sessions} barCategoryGap={30} margin={{ top: 50, right: 0, left: 0, bottom: 0 }}>
+                <BarChart width={650} height={250} data={dataActivity} barCategoryGap={30} margin={{ top: 50, right: 0, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 5" vertical={false} />
                     {/* <Legend iconType="circle" iconSize={10} align='right' verticalAlign='top' height={50} wrapperStyle={{ fontSize: 12 }} /> */}
                     <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="15" tick={{ fill: "#9B9EAC", fontSize: "14" }} padding={{ left: -30, right: -30 }} stroke="#DEDEDE" />

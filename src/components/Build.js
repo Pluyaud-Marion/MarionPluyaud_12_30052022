@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * Component "Building page"
+ * @returns {JSX} - React component
+ */
 const Build = () => {
     return (
         <div className='Build'>

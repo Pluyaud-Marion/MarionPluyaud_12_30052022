@@ -1,16 +1,14 @@
 
-import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
 import SwitchButton from '../components/SwitchButton';
 import ButtonUser from '../components/ButtonUser';
-import { urlApi } from '../utils/const/urlApi';
-import { urlMock } from '../utils/const/urlMock';
 import { userList } from '../utils/const/userList';
-import { useApi } from '../utils/useApi/useApi';
 
 
+/**
+ * Page Home with ButtonUser component and SwitchButton component
+ * @returns {JSX} - React component - Page
+ */
 const Home = () => {
-
     return (
         <div className='Home'>
             <div className='button-user'>
