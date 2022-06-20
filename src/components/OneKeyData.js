@@ -11,13 +11,6 @@ import PropTypes from "prop-types"
  */
 const OneKeyData = ({ keyImg, keyData, keyName, keyUnit }) => {
 
-    OneKeyData.propTypes = {
-        keyImg: PropTypes.string,
-        keyData: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        keyName: PropTypes.string,
-        keyUnit: PropTypes.string
-    }
-
     return (
         <div className='OneKeyData'>
             <img src={keyImg} alt={keyImg} className='icon'></img>
@@ -30,5 +23,12 @@ const OneKeyData = ({ keyImg, keyData, keyName, keyUnit }) => {
         </div>
     );
 };
+
+OneKeyData.propTypes = {
+    keyImg: PropTypes.string,
+    keyData: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    keyName: PropTypes.string,
+    keyUnit: PropTypes.string
+}
 
 export default OneKeyData;

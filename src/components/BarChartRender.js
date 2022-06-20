@@ -10,10 +10,6 @@ import circleBlack from "../assets/icon-circle-black.png"
  */
 const BarChartRender = ({ dataActivity }) => {
 
-    BarChartRender.propTypes = {
-        dataActivity: PropTypes.array
-    }
-
     const formatXAxis = (tickItem) => {
         return tickItem + 1;
     }
@@ -64,6 +60,10 @@ const BarChartRender = ({ dataActivity }) => {
         </div>
     );
 };
+
+BarChartRender.propTypes = {
+    dataActivity: PropTypes.array
+}
 
 export default BarChartRender;
 

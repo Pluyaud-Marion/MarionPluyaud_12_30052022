@@ -13,10 +13,6 @@ import iconGlucides from "../assets/glucide-icon.png"
  */
 const KeyData = ({ keyData }) => {
 
-    KeyData.propTypes = {
-        keyData: PropTypes.object
-    }
-
     return (
         <div className='container-keyData'>
             <OneKeyData keyImg={iconCalories} keyData={keyData?.calorieCount.toLocaleString('en')} keyUnit="kCal" keyName={" Calories"} />
@@ -26,5 +22,9 @@ const KeyData = ({ keyData }) => {
         </div>
     );
 };
+
+KeyData.propTypes = {
+    keyData: PropTypes.object
+}
 
 export default KeyData;

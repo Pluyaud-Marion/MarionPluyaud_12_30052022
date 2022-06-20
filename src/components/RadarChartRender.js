@@ -9,10 +9,6 @@ import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Responsi
  */
 const RadarChartRender = ({ dataPerformances }) => {
 
-    RadarChartRender.propTypes = {
-        dataPerformances: PropTypes.array
-    }
-
     const french = {
         1: "Cardio",
         2: "Energie",
@@ -24,7 +20,7 @@ const RadarChartRender = ({ dataPerformances }) => {
 
     const translation = (el) => french[el]
 
-    return (
+    return (<>{dataPerformances && (
         <div className='RadarChart'>
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart outerRadius="60%" data={dataPerformances}>
@@ -36,7 +32,11 @@ const RadarChartRender = ({ dataPerformances }) => {
                 </RadarChart>
             </ResponsiveContainer>
         </div>
-    );
+    )}</>)
 };
+
+RadarChartRender.propTypes = {
+    dataPerformances: PropTypes.array
+}
 
 export default RadarChartRender;

@@ -9,10 +9,6 @@ import { Link } from 'react-router-dom';
 */
 const ButtonUser = ({ userList }) => {
 
-    ButtonUser.prototype = {
-        userList: PropTypes.array
-    }
-
     return (
         <div className='ButtonUser'>
             {
@@ -26,5 +22,10 @@ const ButtonUser = ({ userList }) => {
         </div>
     );
 };
+
+ButtonUser.propTypes = {
+    userList: PropTypes.array
+}
+
 
 export default ButtonUser;

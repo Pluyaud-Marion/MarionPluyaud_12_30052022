@@ -8,9 +8,6 @@ import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'rec
  * @returns {JSX} - React component
  */
 const LineChartRender = ({ dataAverageSessions }) => {
-    LineChartRender.propTypes = {
-        dataAverageSessions: PropTypes.array
-    }
 
     const day = {
         1: "L",
@@ -53,5 +50,9 @@ const LineChartRender = ({ dataAverageSessions }) => {
         </div >
     );
 };
+
+LineChartRender.propTypes = {
+    dataAverageSessions: PropTypes.array
+}
 
 export default LineChartRender;

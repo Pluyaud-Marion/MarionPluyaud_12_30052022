@@ -44,8 +44,8 @@ const Profile = () => {
                 <div className='container-graph-recharts'>
                     <BarChartRender dataActivity={dataActivity?.sessions} />
                     <div className='container-small-graph'>
-                        <LineChartRender dataAverageSessions={dataAverageSessions?.sessions} />
-                        <RadarChartRender dataPerformances={dataPerformances?.data} />
+                        <LineChartRender dataAverageSessions={dataAverageSessions.sessions} />
+                        {dataPerformances && <RadarChartRender dataPerformances={dataPerformances.data} />}
                         <PieChartRender dataTodayScore={dataMain} />
                     </div>
                 </div>

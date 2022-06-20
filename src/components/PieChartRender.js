@@ -9,10 +9,6 @@ import { Pie, PieChart, ResponsiveContainer } from 'recharts';
  */
 const PieChartRender = ({ dataTodayScore }) => {
 
-    PieChartRender.propTypes = {
-        dataTodayScore: PropTypes.object
-    }
-
     // Error in JSON + in backend (score/todayScore)
     const todayScore = dataTodayScore?.score || dataTodayScore?.todayScore
 
@@ -43,7 +39,11 @@ const PieChartRender = ({ dataTodayScore }) => {
             </div>
 
         </div>
-    );
+    )
 };
+
+PieChartRender.propTypes = {
+    dataTodayScore: PropTypes.object
+}
 
 export default PieChartRender;
