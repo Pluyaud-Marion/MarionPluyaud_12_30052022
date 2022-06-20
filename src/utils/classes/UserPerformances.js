@@ -1,6 +1,6 @@
 export default class UserPerformances {
-    constructor(id, kind, data) {
-        this.id = id;
+    constructor(userId, kind, data) {
+        this.userId = userId;
         this.kind = kind;
         this.data = data;
     }

@@ -3,4 +3,6 @@ export default class ActivityData {
         this.userId = userId;
         this.sessions = sessions;
     }
+
+
 }

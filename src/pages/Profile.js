@@ -29,7 +29,6 @@ const Profile = () => {
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
 
-
     // if (id != dataMain?.data?.id) {
     //     return <Navigate to="/error" />
     // }
@@ -43,14 +42,14 @@ const Profile = () => {
             </header>
             <div className='container-graph'>
                 <div className='container-graph-recharts'>
-                    <BarChartRender dataActivity={dataActivity?.data?.sessions} />
+                    <BarChartRender dataActivity={dataActivity?.sessions} />
                     <div className='container-small-graph'>
-                        <LineChartRender dataAverageSessions={dataAverageSessions?.data?.sessions} />
-                        <RadarChartRender dataPerformances={dataPerformances?.data?.data} />
-                        <PieChartRender dataTodayScore={dataMain?.data} />
+                        <LineChartRender dataAverageSessions={dataAverageSessions?.sessions} />
+                        <RadarChartRender dataPerformances={dataPerformances?.data} />
+                        <PieChartRender dataTodayScore={dataMain} />
                     </div>
                 </div>
-                <KeyData keyData={dataMain?.data?.keyData} />
+                <KeyData keyData={dataMain?.keyData} />
             </div>
             <span className='data-type'>{mode === urlMock ? "--- Données Mockées ---" : "--- Données de l'API ---"}</span>
         </div>

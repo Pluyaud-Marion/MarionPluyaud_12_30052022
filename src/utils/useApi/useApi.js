@@ -21,7 +21,6 @@ export const useApi = (url) => {
     //     return <Navigate to="/error" />
     // }
     // } else {
-
     return data
     // }
 
