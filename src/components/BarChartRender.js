@@ -27,6 +27,8 @@ const BarChartRender = ({ dataActivity }) => {
                     <p className='kcal'>{`${payload[1].value}kCal`}</p>
                 </div>
             )
+        } else {
+            return null
         }
     }
 
@@ -46,7 +48,9 @@ const BarChartRender = ({ dataActivity }) => {
             <ResponsiveContainer width="90%" height={250} >
                 <BarChart width={650} height={250} data={dataActivity} barCategoryGap={30} margin={{ top: 50, right: 0, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 5" vertical={false} />
-                    {/* <Legend iconType="circle" iconSize={10} align='right' verticalAlign='top' height={50} wrapperStyle={{ fontSize: 12 }} /> */}
+                    {/* <Legend iconType="circle" iconSize={10} align='right' verticalAlign='top' height={50} wrapperStyle={{
+                        fontSize: 12
+                    }} /> */}
                     <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="15" tick={{ fill: "#9B9EAC", fontSize: "14" }} padding={{ left: -30, right: -30 }} stroke="#DEDEDE" />
                     <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tickSize="25" domain={['dataMin-5', 'dataMax+1']} tickCount={4} tick={{ fill: "#9B9EAC", fontSize: "14" }} />
                     <YAxis hide yAxisId="left" orientation="left" axisLine={false} tickLine={false} />

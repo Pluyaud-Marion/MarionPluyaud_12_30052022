@@ -33,6 +33,8 @@ const LineChartRender = ({ dataAverageSessions }) => {
                     <p className='mn'>{`${payload[0].value}min`}</p>
                 </div>
             )
+        } else {
+            return null
         }
     }
 
