@@ -10,13 +10,12 @@ export const useApi = (url) => {
 
     useEffect(() => {
         axios.get(url)
-            // .then(res => setData(convertData(res.data, url)))
             .then(res => setData(convertData(res.data, url)))
             .catch(error => console.log(error))
 
     }, [url])
 
-    //console.log(data.data.id);
+
     // if (data?.data?.id === undefined) {
     //     return <Navigate to="/error" />
     // }

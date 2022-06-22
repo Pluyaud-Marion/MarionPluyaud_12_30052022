@@ -32,12 +32,12 @@ const Profile = () => {
     // if (id != dataMain?.data?.id) {
     //     return <Navigate to="/error" />
     // }
-
+    //console.log(dataMain);
 
     return (
         <div className='Profile'>
             <header>
-                <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.data?.userInfos?.firstName}</span></h1>
+                <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.userInfos?.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </header>
             <div className='container-graph'>

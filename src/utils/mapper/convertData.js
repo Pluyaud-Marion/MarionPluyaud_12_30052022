@@ -15,7 +15,7 @@ export default function convertData(data, url) {
             return new UserPerformances(data.data.userId, data.data.kind, data.data.data)
         }
         if (!url.includes("activity") || !url.includes("average") || !url.includes("performance")) {
-            return new MainData(data.data.id, data.data.todayScore, data.data.score, data.data.keyData)
+            return new MainData(data.data.id, data.data.userInfos, data.data.todayScore, data.data.score, data.data.keyData)
         }
     }
 
