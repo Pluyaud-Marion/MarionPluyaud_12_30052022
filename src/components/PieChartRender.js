@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from 'react';
-import { Pie, PieChart, ResponsiveContainer } from 'recharts';
+import { Legend, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
 /**
  * chart about daily target percentage of one user
@@ -23,6 +23,23 @@ const PieChartRender = ({ dataTodayScore }) => {
         name: 'inside', value: 100
     }]
 
+    // return (
+    //     <div className='PieChart'>
+    //         <span className='title-chart'>Score</span>
+    //         <ResponsiveContainer width="100%" height="100%">
+    //             <PieChart >
+    //                 <Pie data={inside} dataKey="value" innerRadius={0} outerRadius={80} fill="white" />
+    //                 <Pie data={score} dataKey="value" innerRadius={69} outerRadius={80} startAngle={90} endAngle={500} cornerRadius="50%" />
+    //             </PieChart>
+    //         </ResponsiveContainer>
+    //         <div className='legend'>
+    //             <span className='legend-number'>{todayScore * 100}% </span>
+    //             <p className='legend-text'>de votre <br />
+    //                 objectif</p>
+    //         </div>
+
+    //     </div>
+    // )
     return (
         <div className='PieChart'>
             <span className='title-chart'>Score</span>
@@ -32,11 +49,11 @@ const PieChartRender = ({ dataTodayScore }) => {
                     <Pie data={score} dataKey="value" innerRadius={69} outerRadius={80} startAngle={90} endAngle={500} cornerRadius="50%" />
                 </PieChart>
             </ResponsiveContainer>
-            <div className='legend'>
-                <span className='legend-number'>{todayScore * 100}% </span>
-                <p className='legend-text'>de votre <br />
-                    objectif</p>
-            </div>
+            {/* <div className='legend'> */}
+            <span className='legend-number'>{todayScore * 100}% </span>
+            <p className='legend-text'>de votre <br />
+                objectif</p>
+            {/* </div> */}
 
         </div>
     )

@@ -9,7 +9,7 @@ import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
 import { useContext } from "react";
 import { ModeContext } from "../utils/context"
-import { userList } from '../utils/const/userList';
+//import { userList } from '../utils/const/userList';
 
 
 /**
@@ -22,7 +22,6 @@ const Profile = () => {
     const { mode } = useContext(ModeContext)
 
     const url = mode
-
     //const url = urlMock
     //const url = urlApi
     const dataMain = useApi(url.userMainData(id))
@@ -30,31 +29,32 @@ const Profile = () => {
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
 
-    const users = userList.map(user => user.id)
+    //const users = userList.map(user => user.id)
 
-    // console.log(users);
-    // console.log("id", id);
+    // if (!users.includes(Number(id))) {
+    //     return <Navigate to="/error" />
+    // }
 
-    if (!users.includes(Number(id))) {
+    if (dataMain.errorUrl || dataActivity.errorUrl || dataAverageSessions.errorUrl || dataPerformances.errorUrl) {
         return <Navigate to="/error" />
     }
 
     return (
         <div className='Profile'>
             <header>
-                <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.userInfos?.firstName}</span></h1>
+                <h1 className='title'>Bonjour <span className='firstname'>{dataMain?.data?.userInfos?.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </header>
             <div className='container-graph'>
                 <div className='container-graph-recharts'>
-                    <BarChartRender dataActivity={dataActivity?.sessions} />
+                    <BarChartRender dataActivity={dataActivity?.data?.sessions} />
                     <div className='container-small-graph'>
-                        <LineChartRender dataAverageSessions={dataAverageSessions.sessions} />
-                        {dataPerformances && <RadarChartRender dataPerformances={dataPerformances.data} />}
-                        <PieChartRender dataTodayScore={dataMain} />
+                        <LineChartRender dataAverageSessions={dataAverageSessions?.data?.sessions} />
+                        {dataPerformances && <RadarChartRender dataPerformances={dataPerformances.data.data} />}
+                        <PieChartRender dataTodayScore={dataMain?.data} />
                     </div>
                 </div>
-                <KeyData keyData={dataMain?.keyData} />
+                <KeyData keyData={dataMain?.data?.keyData} />
             </div>
             <span className='data-type'>{mode === urlMock ? "--- Données Mockées ---" : "--- Données de l'API ---"}</span>
         </div>
