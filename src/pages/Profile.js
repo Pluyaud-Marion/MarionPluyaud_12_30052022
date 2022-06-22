@@ -9,6 +9,7 @@ import { urlMock } from '../utils/const/urlMock';
 import { useApi } from '../utils/useApi/useApi';
 import { useContext } from "react";
 import { ModeContext } from "../utils/context"
+import { userList } from '../utils/const/userList';
 
 
 /**
@@ -29,10 +30,14 @@ const Profile = () => {
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
 
-    // if (id != dataMain?.data?.id) {
-    //     return <Navigate to="/error" />
-    // }
-    //console.log(dataMain);
+    const users = userList.map(user => user.id)
+
+    // console.log(users);
+    // console.log("id", id);
+
+    if (!users.includes(Number(id))) {
+        return <Navigate to="/error" />
+    }
 
     return (
         <div className='Profile'>

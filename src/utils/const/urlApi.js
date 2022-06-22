@@ -11,5 +11,4 @@ export const urlApi = {
     userPerformances(id) {
         return `http://localhost:3000/user/${id}/performance`
     }
-
 }

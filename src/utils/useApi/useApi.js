@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Navigate } from "react-router-dom"
 import convertData from "../mapper/convertData"
 
 
@@ -15,17 +14,6 @@ export const useApi = (url) => {
 
     }, [url])
 
-
-    // if (data?.data?.id === undefined) {
-    //     return <Navigate to="/error" />
-    // }
-    // } else {
     return data
-    // }
-
-
-
-
-
 
 }
