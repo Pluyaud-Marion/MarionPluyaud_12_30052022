@@ -33,3 +33,4 @@ Développement d'un dashboard permettant aux utilisateurs de SportSee de suivre 
 - Maquettes fournies pour version Desktop (à partir de 1024px)
 - Pas de version mobile, ni tablette
 - Le site doit pouvoir etre alimenté avec des données mockées et avec des données issues de l'API
+- Développement uniquement de la page profil
