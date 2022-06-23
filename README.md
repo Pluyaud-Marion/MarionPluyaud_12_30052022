@@ -1,8 +1,6 @@
-Ce repository a été réalisé dans le cadre d'un projet pour la formation Développeur d'application JavaScript | React - Openclassrooms
+This repo contains all the source code for project 12 of DA Javascript | React training - Openclassrooms 
 
-# Projet 12 - Développez un tableau de bord d'analytics avec React
-
-Développement d'un dashboard permettant aux utilisateurs de SportSee de suivre leurs activités physiques.
+# Project 12 - Build an analytics dashboard with React
 
 # Technologies : 
 
@@ -13,24 +11,31 @@ Développement d'un dashboard permettant aux utilisateurs de SportSee de suivre 
 - prop-types
 - Jsdoc
 
-#   Installation en local du projet :
+#   Launching the project :
 
-*  Prérequis :
+*  Prerequisites :
   Node.js v12.18
+ 
+* Fork this repository
+* Clone it on your computer
 
-* Backend : (API seule présente à l'adresse suivante : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
-  - Exécuter les commandes suivantes dans le terminal pour installer les dépendances et lancer l'API : 
+* Backend : (you can find only the API here : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
+  - Run the following commands in your terminal for launch API : 
   `cd P9-front-end-dashboard-master && npm install && npm start`
+  
+  *Run on port 3000*
 
 * Frontend : 
-  - Exécuter les commandes suivantes dans un second terminal pour lancer la partie front du projet : 
+  - Run the following commands in other terminal for launch front : 
   `npm install && npm start`
+  
+  *Run on port 3001*
 
-# Pour générer la documentation : 
+# To generate the documentation : 
 `npm run doc`
 
-# Demandes client :
-- Maquettes fournies pour version Desktop (à partir de 1024px)
-- Pas de version mobile, ni tablette
-- Le site doit pouvoir etre alimenté avec des données mockées et avec des données issues de l'API
-- Développement uniquement de la page profil
+# Customer request :
+- [Mock-up on figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1%3A2)
+- No mobile or tablet version (only desktop 1024px)
+- The webiste must be receive data from mock and data from API
+- Development of the profile page only
