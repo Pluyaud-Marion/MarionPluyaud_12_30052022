@@ -35,8 +35,8 @@ const RadarChartRender = ({ dataPerformances }) => {
     )}</>)
 };
 
-// RadarChartRender.propTypes = {
-//     dataPerformances: PropTypes.array
-// }
+RadarChartRender.propTypes = {
+    dataPerformances: PropTypes.array
+}
 
 export default RadarChartRender;

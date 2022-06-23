@@ -46,7 +46,7 @@ const LineChartRender = ({ dataAverageSessions }) => {
                     <XAxis dataKey="day" tickLine={false} axisLine={false} tickSize="15" tick={{ fill: "#FFF", opacity: 0.5, fontSize: 12 }} tickFormatter={weekFormat} />
                     <YAxis hide />
                     <Tooltip width={50} content={<CustomTooltip />} cursor={{ stroke: "#000000", strokeOpacity: "0.1", strokeWidth: 50, }} position={{ y: 100 }} />
-                    <Line type="monotone" dataKey="sessionLength" stroke='#FFF' opacity="0.5" dot={false} activeDot={{ r: 2 }} />
+                    <Line type="monotone" dataKey="sessionLength" stroke='#FFF' dot={false} activeDot={{ r: 3 }} />
                 </LineChart>
             </ResponsiveContainer>
         </div >

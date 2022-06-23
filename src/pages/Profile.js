@@ -18,19 +18,18 @@ import { ModeContext } from "../utils/context"
  */
 const Profile = () => {
     const { id } = useParams()
-
     const { mode } = useContext(ModeContext)
 
     const url = mode
     //const url = urlMock
     //const url = urlApi
+
     const dataMain = useApi(url.userMainData(id))
     const dataActivity = useApi(url.userActivity(id))
     const dataAverageSessions = useApi(url.userAverageSessions(id))
     const dataPerformances = useApi(url.userPerformances(id))
 
     //const users = userList.map(user => user.id)
-
     // if (!users.includes(Number(id))) {
     //     return <Navigate to="/error" />
     // }
