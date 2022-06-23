@@ -1,4 +1,4 @@
-This repo contains all the source code for project 12 of DA Javascript | React training - Openclassrooms 
+This repo contains all the source code for project 12 of DA Javascript | React learning - Openclassrooms 
 
 # Project 12 - Build an analytics dashboard with React
 
