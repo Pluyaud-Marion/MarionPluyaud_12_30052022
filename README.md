@@ -36,6 +36,6 @@ This repo contains all the source code for project 12 of DA Javascript | React l
 
 # Customer request :
 - [Mock-up on figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1%3A2)
-- No mobile or tablet version (only desktop 1024px)
+- No mobile or tablet version (only desktop from 1024px)
 - The webiste must be receive data from mock and data from API
 - Development of the profile page only
