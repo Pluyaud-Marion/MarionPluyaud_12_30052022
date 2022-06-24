@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MarionPluyaud_12_30052022/static/css/main.bf22c8a1.css",
-    "main.js": "/MarionPluyaud_12_30052022/static/js/main.a58798b6.js",
+    "main.js": "/MarionPluyaud_12_30052022/static/js/main.55db087d.js",
     "static/media/logo.png": "/MarionPluyaud_12_30052022/static/media/logo.c16051107fb3361d3020.png",
     "index.html": "/MarionPluyaud_12_30052022/index.html",
     "main.bf22c8a1.css.map": "/MarionPluyaud_12_30052022/static/css/main.bf22c8a1.css.map",
-    "main.a58798b6.js.map": "/MarionPluyaud_12_30052022/static/js/main.a58798b6.js.map"
+    "main.55db087d.js.map": "/MarionPluyaud_12_30052022/static/js/main.55db087d.js.map"
   },
   "entrypoints": [
     "static/css/main.bf22c8a1.css",
-    "static/js/main.a58798b6.js"
+    "static/js/main.55db087d.js"
   ]
 }
