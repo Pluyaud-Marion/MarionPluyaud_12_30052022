@@ -39,3 +39,6 @@ This repo contains all the source code for project 12 of DA Javascript | React l
 - No mobile or tablet version (only desktop from 1024px)
 - The webiste must be receive data from mock and data from API
 - Development of the profile page only
+
+# You can visit site here : 
+https://sportsee-pluyaud.netlify.app
