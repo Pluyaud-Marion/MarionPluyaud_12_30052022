@@ -16,7 +16,7 @@ export const useApi = (url) => {
             })
 
     }, [url])
-    console.log(url);
+
     return { data, errorUrl }
 
 }
