@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Profile from './pages/Profile'
 import Error from './pages/Error'
 import Community from './pages/Community';
@@ -12,8 +12,8 @@ import { ModeProvider } from './utils/context';
 //Router
 const App = () => {
   return (
-    <HashRouter>
-      {/* <BrowserRouter> */}
+
+    <BrowserRouter>
       <Navigation />
       <ModeProvider>
         <Routes>
@@ -26,8 +26,7 @@ const App = () => {
           <Route path='*' element={<Error />} />
         </Routes>
       </ModeProvider>
-    </HashRouter>
-    // </BrowserRouter>
+    </BrowserRouter>
   );
 };
 
