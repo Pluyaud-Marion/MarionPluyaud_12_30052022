@@ -19,7 +19,7 @@ This repo contains all the source code for project 12 of DA Javascript | React l
 * Fork this repository
 * Clone it on your computer
 
-* Backend : (you can find only the API here : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
+* API : (you can find only the API here : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
   - Run the following commands in your terminal for launch API : 
   `cd P9-front-end-dashboard-master && npm install && npm start`
   
