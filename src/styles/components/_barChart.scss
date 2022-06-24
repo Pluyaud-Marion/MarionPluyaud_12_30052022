@@ -2,52 +2,50 @@
     background-color: #FBFBFB;
     width: 96%;
     border-radius: 5px;
-    padding-left: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
+    padding: 2%;
+    padding-bottom: 4%;
     height: 280px;
-    margin-right: 5%;
+    margin-bottom: 3%;
     position: relative;
-
-    // .recharts-wrapper {
-    //     width: 100% !important;
-    // }
-
-    // .recharts-surface {
-    //     width: 100%;
-    // }
 
     .recharts-responsive-container {
         margin: 0 auto;
     }
 
-    .title-barchart {
-        font-size: 15px;
-        color: #20253A;
-        position: relative;
-        top: 19px;
-        right: -26px;
-        font-weight: 500;
+    .legend-title-barchart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 4%;
+        margin-top: 2%;
+
+        .title-barchart {
+            font-size: 15px;
+            color: #20253A;
+            font-weight: 500;
+        }
+
+        .legend-barchart {
+            display: flex;
+            width: 50%;
+
+            .legend-black {
+                width: 53%;
+            }
+
+            .text-icon {
+                color: #74798C;
+                font-size: 14px;
+                margin-left: 5%;
+            }
+
+            .legend-red {
+                width: 83%;
+            }
+        }
+
     }
 
-    .legend-black {
-        position: absolute;
-        left: 350px;
-        width: 30%;
-    }
-
-    .text-icon {
-        color: #74798C;
-        font-size: 14px;
-        margin-left: 5%;
-    }
-
-    .legend-red {
-        position: absolute;
-        left: 450px;
-        width: 30%;
-    }
 }
 
 .container-payload-barchart {
@@ -63,5 +61,45 @@
     .kcal {
         color: #FFFFFF;
         font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .BarChart {
+        .legend-title-barchart {
+            .legend-barchart {
+                width: 42%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .BarChart {
+        .legend-title-barchart {
+            .legend-barchart {
+                width: 37%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:2000px) {
+    .BarChart {
+        .legend-title-barchart {
+            .legend-barchart {
+                width: 33%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:2500px) {
+    .BarChart {
+        .legend-title-barchart {
+            .legend-barchart {
+                width: 28%;
+            }
+        }
     }
 }

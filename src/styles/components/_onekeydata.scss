@@ -16,7 +16,7 @@
     }
 
     .container-number-name {
-        width: 40%;
+        width: 20%;
         margin-left: 10%;
 
         .number,
@@ -30,6 +30,18 @@
             font-weight: 500;
             color: #74798C;
             font-size: 14px;
+        }
+    }
+}
+
+@media screen and (min-width:2047px) {
+    .OneKeyData {
+        .icon {
+            width: 22%;
+        }
+
+        .container-number-name {
+            width: 15%;
         }
     }
 }
