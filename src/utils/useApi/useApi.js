@@ -14,9 +14,6 @@ export const useApi = (url) => {
                 setErrorUrl(true);
                 console.log(error)
             })
-
     }, [url])
-
     return { data, errorUrl }
-
 }

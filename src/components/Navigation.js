@@ -6,6 +6,10 @@ import iconSwim from "../assets/icon-swim.png"
 import iconBike from "../assets/icon-bike.png"
 import iconFitness from "../assets/icon-fitness.png"
 
+/**
+ * horizontal and vertical navbar
+ * @returns {JSX} - React component
+ */
 const Navigation = () => {
     return (
         <div>

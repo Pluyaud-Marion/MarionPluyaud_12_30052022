@@ -1,5 +1,3 @@
-
-
 export const urlMock = {
     userMainData(id) {
         return `../data/${id}_main_data.json`
